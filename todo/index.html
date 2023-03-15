@@ -13,8 +13,8 @@
 </head>
 <body>
     <div class="container">
-        <aside class="menu-aside">
-            <button class="menu-button">▶</button>
+        <aside class="menu-aside hidden-menu">
+            <button class="menu-button"><i class="fa-solid fa-arrow-right"></i></button>
 
             <header class="aside-header">
                 <h1 class="header-title"><i class="fa-solid fa-calendar-check"></i>TODOLIST</h1>
@@ -30,7 +30,28 @@
             </nav>
         </aside>
         <main class="main-container">
+            <header class="main-header">
+                <h1 class="main-title">ToDo</h1>
+            <div class="todo-input-container">
+                <i class="fa-regular fa-file"></i>
+                <input type="text" class="todo-input" placeholder="please enter todo...">
+                <button class="add-todo-button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </header>
+            <ul class="todo-content-list">
+                <li class="content-container">
+                    <div class="content-header">
+                        <div class="todo-date">2023. 03. 15</div>
+                        <div class="todo-date-time">17:50:00</div>
+                    </div>
+                    <div class="content-main">
 
+                    </div>
+                    <div class="content-footer">
+
+                    </div>
+                </li>
+            </ul>
         </main>
     </div>
 </body>
