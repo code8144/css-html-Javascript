@@ -17,13 +17,13 @@
     overflow: hidden;
 }
 
-input {
+input, textarea {
     border: none;
     outline: none;
     padding: 5px;
 }
 
-input:focus {
+input:focus, textarea:focus {
     background-color: #fafafa;
 }
 
@@ -42,3 +42,4 @@ button:hover {
 button:active {
     background-color: #f0f0f0;
 }
+
