@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="homecolor" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ssibal</title>
+    <!-- 아이콘 CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    
+    <div class="inner">
+        <!-- 헤더 -->
+        <header>
+            <div class="title-box">
+                <h1 data-shadow='Todo-List'>Todo-List</h1>
+            </div>
+        </header>
+
+        <!-- 본문 -->
+        <div>
+            <!-- 전체/진행중/완료 조회 -->
+            <div class="searchBox">
+                <input type="button" class="searchBtn btn-all" value="전체">
+                <input type="button" class="searchBtn btn-before" value="진행중">
+                <input type="button" class="searchBtn btn-after" value="완료">
+            </div>
+
+            <!-- Todo-List -->
+            <div class="listBox">
+                <!-- 작성하기 -->
+                <div class="addBox">
+                    <div class="addBox_inner">
+                        <input type="text" class="addTxt" placeholder="오늘의 할 일">
+                        <input type="button" class="addBtn" value="+">
+                    </div>
+                </div>
+
+                 <!-- 전체선택/삭제 -->
+                <div class="allCheckBox">
+                    <label class="allSelect_lb"><input type="checkbox" class="allSelect">전체선택</label>
+                    <a href="javascript:void(0)" class="allDel">전체삭제</a>
+                </div>
+
+                <!-- 목록 -->
+                <div class="listBox_inner"></div>
+            </div>         
+        </div>
+    </div>
+</body>
+</html>
