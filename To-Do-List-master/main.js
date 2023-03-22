@@ -50,8 +50,6 @@ function loadList() {
 // addTxt 입력창 null값 판단
 function addList() {
 
-    
-
     if(addTxt.value !== "") {
         // list를 출력할 <div> 요소생성
         // let list = document.createElement('div')
@@ -163,7 +161,7 @@ beforeBtn.addEventListener('click', function() {
 
     for(let i=0; i<listCheck.length; i++) {
         
-        if(listCheck[i].checked == true) {
+        if(listCheck[i].checked) {
             listEls[i].style.display = "none"
         } else {
             listEls[i].style.display = ""
@@ -172,14 +170,13 @@ beforeBtn.addEventListener('click', function() {
 
 })
 
-
 // 완료 조회
 afterBtn.addEventListener('click', function() {
 
     listEls = document.querySelectorAll('.list')
 
     for(let i=0; i<listEls.length; i++) {
-        if(listCheck[i].checked == true) {
+        if(listCheck[i].checked) {
             listEls[i].style.display = ""
         } else {
             listEls[i].style.display = "none"
@@ -222,28 +219,27 @@ function listCount() {
 
 // 전체선택
 allSelect.addEventListener('click', function() {
-
     listCheck = document.querySelectorAll('.listCheck')
     listLb = document.querySelectorAll('.listLb')
 
     if(allSelect.checked) { // 전체선택 체크
 
         for(let i=0; i<listCheck.length; i++) {
-            listCheck[i].checked = true;
+            todoList[i].checkStatus = true;
             listLb[i].style.textDecoration = "line-through"
         }
 
     } else {    // 전체선택 해제
 
         for(let i=0; i<listCheck.length; i++) {
-            listCheck[i].checked = false;
+            todoList[i].checkStatus = false;
             listLb[i].style.textDecoration = "none"
         }
 
     }
-
-    listCount()
-
+    updateLocalStorage();
+    loadList();
+    listCount();
 })
 
 
@@ -264,3 +260,4 @@ window.onload = () => {
     todoList = JSON.parse(localStorage.getItem("todoList"));
     loadList();
 }
+
